@@ -1,0 +1,120 @@
+\section{Variation of Scalar Field Coupled EH Action}
+
+The action is given as,
+\begin{align}
+    S = \int d^{4}x\sqrt{-g}\mathcal{L}
+\end{align}
+
+where $\mathcal{L}$,
+\begin{align}
+    \mathcal{L} = f\left(\phi\right)R - \frac{h\left(\phi\right)}{2}g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\phi - V\left(\phi\right)
+\end{align}
+
+Taking the variation wrt inverse metric $g^{\mu\nu}$,
+\begin{align}
+    \delta S &= \int d^{4}x\frac{\delta \left(\sqrt{-g}\mathcal{L}\right)}{\delta g^{\mu\nu}}\delta g^{\mu\nu}\\
+    \label{eq:var}
+    &= \int d^{4}x\left\{\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\mathcal{L} + \frac{\delta\mathcal{L}}{\delta g^{\mu\nu}}\sqrt{-g}\right\}\delta g^{\mu\nu}
+\end{align}
+
+From above variation we already know the first term as,
+\begin{align}
+    \frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}} = -\frac{1}{2}\sqrt{-g}g_{\mu\nu}
+\end{align}
+
+Second term can be calculated as,
+\begin{align}
+    \frac{\delta \mathcal{L}}{\delta g^{\mu\nu}} &= \frac{\delta\left(f\left(\phi\right)R - \frac{h\left(\phi\right)}{2}g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\phi - V\left(\phi\right)\right)}{\delta g^{\mu\nu}}\\
+    &= f\left(\phi\right)\frac{\delta R}{\delta g^{\mu\nu}} - \frac{h\left(\phi\right)}{2}\partial_{\mu}\phi\partial_{\nu}\phi\frac{\delta g^{\mu\nu}}{\delta g^{\mu\nu}}\\
+\end{align}
+
+Variation of the Ricci scalar can be calculated as,
+\begin{align}
+    \delta R^{\rho}_{\ \sigma\mu\nu} &= \delta\left(\partial_{\mu}\Gamma^{\rho}_{\ \sigma\nu} - \partial_{\nu}\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\rho}_{\ \mu\lambda}\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\rho}_{\ \nu\lambda}\Gamma^{\lambda}_{\ \sigma\mu}\right)\\
+    &= \partial_{\mu}\delta\Gamma^{\rho}_{\ \sigma\nu} - \partial_{\nu}\delta\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\lambda}_{\ \sigma\nu}\delta\Gamma^{\rho}_{\ \mu\lambda} + \Gamma^{\rho}_{\ \mu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\lambda}_{\ \sigma\mu}\delta\Gamma^{\rho}_{\ \nu\lambda} - \Gamma^{\rho}_{\ \nu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\mu}\\
+\end{align}
+
+Covariant derivative of the $\delta\Gamma^{\rho}_{\ \sigma\nu}$,
+\begin{equation}
+\begin{split}
+\nabla_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) &= \partial_{\mu}\delta\Gamma^{\rho}_{\ \sigma\nu} + \Gamma^{\rho}_{\ \mu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\lambda}_{\ \mu\sigma}\delta\Gamma^{\rho}_{\ \lambda\nu} - \Gamma^{\lambda}_{\ \mu\nu}\delta \Gamma^{\rho}_{\ \lambda\sigma}\\
+\nabla_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) + \Gamma^{\lambda}_{\ \mu\nu}\delta\Gamma^{\rho}_{\ \lambda\sigma} &= \partial_{\mu}\delta\Gamma^{\rho}_{\ \sigma\nu} + \Gamma^{\rho}_{\ \mu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\lambda}_{\ \mu\sigma}\delta\Gamma^{\rho}_{\ \lambda\nu}
+\end{split}
+\end{equation}
+
+Covariant derivative of the $\delta\Gamma^{\rho}_{\ \sigma\mu}$,
+\begin{equation}
+\begin{split}
+\nabla_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right) &= \partial_{\nu}\delta\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\rho}_{\ \nu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\mu} - \Gamma^{\lambda}_{\ \nu\sigma}\delta\Gamma^{\rho}_{\ \lambda\mu} - \Gamma^{\lambda}_{\ \nu\mu}\delta \Gamma^{\rho}_{\ \lambda\sigma}\\
+-\partial_{\nu}\delta\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\lambda}_{\ \nu\sigma}\delta\Gamma^{\rho}_{\ \lambda\mu} - \Gamma^{\rho}_{\ \nu\lambda}\delta\Gamma^{\lambda}_{\sigma\mu} &= -\nabla_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right) - \Gamma^{\lambda}_{\ \nu\mu}\Gamma^{\rho}_{\ \lambda\sigma}
+\end{split}
+\end{equation}
+
+Inserting the rearranged covariant derivatives into the Eq. \ref{eq:var_of_rs} we have the variation of Riemann tensor as,
+\begin{equation}
+\label{eq:var_of_riemann}
+\delta R^{\rho}_{\ \sigma\mu\nu} = \nabla_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right)
+\end{equation}
+
+Contaction of the first and third indices gives us the variation of the Ricci tensor as,
+\begin{equation}
+\label{eq:var_of_ricci_t}
+\delta R^{\mu}_{\ \sigma\mu\nu} = \delta R_{\sigma\nu} = \nabla_{\mu}\left(\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(\delta\Gamma^{\mu}_{\ \sigma\mu}\right)
+\end{equation}
+
+Variation of Ricci scalar is therefore,
+\begin{equation}
+\label{eq:var_of_ricci_s}
+\begin{split}
+\delta\left(g^{\sigma\nu}R_{\sigma\nu}\right) = \delta R &= R_{\sigma\nu}\delta g^{\sigma\nu} + g^{\sigma\nu}\delta R_{\sigma\nu}\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + g^{\sigma\nu}\left( \nabla_{\mu}\left(\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(\delta\Gamma^{\mu}_{\ \sigma\mu}\right)\right)\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\mu}\right)\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\mu}\left(g^{\sigma\mu}\delta\Gamma^{\nu}_{\ \sigma\nu}\right)\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\nu} - g^{\sigma\mu}\delta\Gamma^{\nu}_{\ \sigma\nu}\right)
+\end{split}
+\end{equation}
+
+Variation of the connection can be calculated as,
+\begin{align}
+    \delta \Gamma^{\sigma}_{\ \mu\nu} = -\frac{1}{2}\left(g_{\lambda\mu}\nabla_{\nu}\left(\delta g^{\lambda\sigma}\right) + g_{\lambda\nu}\nabla_{\mu}\left(\delta g^{\lambda\sigma}\right) - g_{\mu\alpha}g_{\nu\beta}\nabla^{\sigma}\left(\delta g^{\alpha\beta}\right)\right)
+\end{align}
+
+Inserting the variation of the connection into the variation of Ricci scalar we have,
+\begin{align*}
+\delta R &= R_{\sigma\nu}\delta g^{\sigma\nu} \\
+&+ \nabla_{\mu}\left[g^{\sigma\nu}\left(-\frac{1}{2}\left(g_{\lambda\sigma}\nabla_{\nu}\left(\delta g^{\lambda\mu}\right) + g_{\lambda\nu}\nabla_{\sigma}\left(\delta g^{\lambda\mu}\right) - g_{\sigma\alpha}g_{\nu\beta}\nabla^{\mu}\left(\delta g^{\alpha\beta}\right)\right)\right)\right] \\
+&- \nabla_{\mu}\left[g^{\sigma\mu}\left(-\frac{1}{2}\left(g_{\lambda\sigma}\nabla_{\nu}\left(\delta g^{\lambda\nu}\right) + g_{\lambda\nu}\nabla_{\sigma}\left(\delta g^{\lambda\nu}\right) - g_{\sigma\alpha}g_{\nu\beta}\nabla^{\nu}\left(\delta g^{\alpha\beta}\right)\right)\right)\right]\\
+&=R_{\sigma\nu}\delta g^{\sigma\nu}+ \nabla_{\mu}\left[-\frac{1}{2}\left(g^{\sigma\nu}g_{\lambda\sigma}\nabla_{\nu}\left(\delta g^{\lambda\mu}\right) + g^{\sigma\nu}g_{\lambda\nu}\nabla_{\sigma}\left(\delta g^{\lambda\mu}\right) - g^{\sigma\nu}g_{\sigma\alpha}g_{\nu\beta}\nabla^{\mu}\left(\delta g^{\alpha\beta}\right)\right)\right]\\
+&+\nabla_{\mu}\left[-\frac{1}{2}\left(-g^{\sigma\mu}g_{\lambda\sigma}\nabla_{\nu}\left(\delta g^{\lambda\nu}\right) - g^{\sigma\mu}g_{\lambda\nu}\nabla_{\sigma}\left(\delta g^{\lambda\nu}\right) + g^{\sigma\mu}g_{\sigma\alpha}g_{\nu\beta}\nabla^{\nu}\left(\delta g^{\alpha\beta}\right)\right)\right]\\
+&=R_{\sigma\nu}\delta g^{\sigma\nu}+ \nabla_{\mu}\left[-\frac{1}{2}\left(\delta^{\nu}_{\lambda}\nabla_{\nu}\left(\delta g^{\lambda\mu}\right) + \delta^{\sigma}_{\lambda}\nabla_{\sigma}\left(\delta g^{\lambda\mu}\right) - \delta^{\nu}_{\alpha}g_{\nu\beta}\nabla^{\mu}\left(\delta g^{\alpha\beta}\right)\right)\right]\\
+&+\nabla_{\mu}\left[-\frac{1}{2}\left(-\delta^{\mu}_{\lambda}\nabla_{\nu}\left(\delta g^{\lambda\nu}\right) - g^{\sigma\mu}g_{\lambda\nu}\nabla_{\sigma}\left(\delta g^{\lambda\nu}\right) + \delta^{\mu}_{\alpha}g_{\nu\beta}\nabla^{\nu}\left(\delta g^{\alpha\beta}\right)\right)\right]\\
+&=R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left[-\frac{1}{2}\left(\nabla_{\nu}\left(\delta g^{\mu\nu}\right) + \nabla_{\sigma}\left(\delta g^{\sigma\mu}\right) - g_{\alpha\beta}\nabla^{\mu}\left(\delta g^{\alpha\beta}\right)\right)\right]\\
+&+\nabla_{\mu}\left[-\frac{1}{2}\left(-\nabla_{\nu}\left(\delta g^{\mu\nu}\right) - g^{\sigma\mu}g_{\lambda\nu}\nabla_{\sigma}\left(\delta g^{\lambda\nu}\right) + g_{\nu\beta}\nabla^{\nu}\left(\delta g^{\mu\beta}\right)\right)\right]\\
+&=R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left[-\frac{1}{2}\nabla_{\sigma}\left(\delta g^{\sigma\mu}\right) + \frac{1}{2}g_{\alpha\beta}\nabla^{\mu}\left(\delta g^{\alpha\beta}\right) + \frac{1}{2}g_{\lambda\nu}\nabla^{\mu}\left(\delta g^{\lambda \nu}\right) - \frac{1}{2}\nabla_{\beta}\left(\delta g^{\mu\beta}\right)\right]\\
+&=R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left[g_{\alpha\beta}\nabla^{\mu}\left(\delta g^{\alpha\beta}\right) - \nabla_{\sigma}\left(\delta g^{\mu\sigma}\right)\right]\\
+&=\boxed{R_{\mu\nu}\delta g^{\mu\nu} + g_{\mu\nu}\nabla_{\lambda}\nabla^{\lambda}\delta g^{\mu\nu} - \nabla_{\mu}\nabla_{\nu}\delta g^{\mu\nu}}
+\end{align*}
+
+\begin{align*}
+\frac{\delta \mathcal{L}}{\delta g^{\mu\nu}} = f\left(\phi\right) R_{\mu\nu} + g_{\mu\nu}\Box f\left(\phi\right) - \nabla_{\mu}\nabla_{\nu}f\left(\phi\right) - \frac{h\left(\phi\right)}{2}\partial_{\mu}\phi\partial_{\nu}\phi
+\end{align*}
+
+Now putting all back to the variation of the action wrt inverse metric expression above, we have,
+\begin{align}
+\boxed{ \delta S = \int d^{4}x \sqrt{-g}\left[f\left(\phi\right)\left\{R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R\right\} + g_{\mu\nu}\Box f\left(\phi\right) - \nabla_{\mu}\nabla_{\nu}f\left(\phi\right) + \frac{h\left(\phi\right)}{2}\partial_{\mu}\phi\partial_{\nu}\phi + \frac{1}{2}g_{\mu\nu}V\left(\phi\right)\right]\delta g^{\mu\nu}}
+\end{align}
+
+Taking the variation wrt scalar field $\phi$,
+\begin{align}
+    &\phi \ \rightarrow\ \phi + \delta \phi\\
+    &S \ \rightarrow\ S + \delta S
+\end{align}
+
+\begin{align}
+    &\cancelto{}S + \delta S = \int d^{4}x\sqrt{-g}\left(f\left(\phi + \delta\phi\right)R - \frac{h\left(\phi + \delta\phi\right)}{2}g^{\mu\nu}\partial_{\mu}\left(\phi + \delta\phi\right)\delta_{\nu}\left(\phi + \delta\phi\right) - V\left(\phi + \delta\phi\right)\right)\\
+    &= \int d^{4}x\sqrt{-g}\left\{\left(f\left(\phi\right) + f^{\prime}\left(\phi\right)\delta\phi\right)R - \frac{1}{2}g^{\mu\nu}\left(h\left(\phi\right) + h^{\prime}\left(\phi\right)\delta\phi\right)\left(\partial_{\mu}\phi + \partial_{\mu}\delta\phi\right)\left(\partial_{\nu}\phi + \partial_{\nu}\delta\phi\right) - V\left(\phi\right) - V^{\prime}\left(\phi\right)\delta\phi\right\}\\
+    &= \int d^{4}x\sqrt{-g}\bigg(\cancelto{}{\left(Rf\left(\phi\right) - \frac{1}{2}g^{\mu\nu}h\left(\phi\right)\partial_{\mu}\phi\partial_{\nu}\phi - V\left(\phi\right)\right)} \\
+    &\quad\quad + Rf^{\prime}\left(\phi\right)\delta\phi - g^{\mu\nu}h\left(\phi\right)\partial_{\mu}\phi\partial_{\nu}\delta\phi - \frac{1}{2}g^{\mu\nu}h^{\prime}\left(\phi\right)\partial_{\mu}\phi\partial_{\nu}\phi\delta\phi- V^{\prime}\left(\phi\right)\delta\phi\bigg)\\
+    &\boxed{\delta S = \int d^{4}x\sqrt{-g}\left\{Rf^{\prime}\left(\phi\right) - g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}h\left(\phi\right) - \frac{1}{2}g^{\mu\nu}h^{\prime}\left(\phi\right)\partial_{\mu}\phi\partial_{\nu}\phi - V^{\prime}\left(\phi\right)\right\}\delta\phi}
+\end{align}
+

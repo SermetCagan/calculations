@@ -1,0 +1,132 @@
+\section{Variation of Einstein-Hilbert Action \label{sec:variation_of_eh_action}}
+
+Einstein-Hilbert action,
+\begin{equation}
+S_{EH} = \frac{1}{2\kappa}\int d^{4}x\sqrt{-g}R\ \text{where}\ \kappa = \frac{8\pi G}{c^{4}}
+\end{equation}
+
+Taking the variation of the action with respect to the inverse metric $g^{\mu\nu}$,
+\begin{equation}
+\label{eq:var_eh}
+\begin{split}
+\delta S_{EH} &= \frac{1}{2\kappa}\int d^{4}x \frac{\delta\left(\sqrt{-g}R\right)}{\delta g^{\mu\nu}}\\
+&= \frac{1}{2\kappa} \int d^{4}x \left(\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}R + \frac{\delta R}{\delta g^{\mu\nu}}\sqrt{-g}\right)\\
+\end{split}
+\end{equation}
+
+First term in the paranthesis in the Eq. \ref{eq:var_eh},
+\begin{equation}
+\label{eq:var_of_mdet}
+\begin{split}
+\delta\sqrt{-g} &= -\frac{1}{2\sqrt{-g}}\delta g\\
+&= \frac{1}{2}\sqrt{-g}g^{\mu\nu}\delta g_{\mu\nu}
+\end{split}
+\end{equation}
+
+where we used the Jacobi's formula,
+\begin{equation}
+\label{eq:jacobi_formula}
+\delta g = g g^{\mu\nu}\delta g_{\mu\nu}
+\end{equation}
+
+To transform the $g^{\mu\nu}\delta g_{\mu\nu}$ in the above formula to $g_{\mu\nu}\delta g^{\mu\nu}$, we can do some index manipulation as,
+
+\begin{equation}
+\begin{split}
+g^{\mu\nu}\delta g_{\mu\nu} &= g^{\mu\nu}\delta\left(g_{\mu\alpha}g_{\nu\beta}g^{\alpha\beta}\right)\\
+&= g^{\mu\nu}\left[g_{\nu\beta}g^{\alpha\beta}\delta g_{\mu\alpha} + g_{\mu\alpha}g^{\alpha\beta}\delta g_{\nu\beta} + g_{\mu\alpha}g_{\nu\beta}\delta g^{\alpha\beta}\right]\\
+&= g^{\mu\nu}\left[\delta_{\nu}^{\alpha}\delta g_{\mu\alpha} + \delta_{\mu}^{\beta}\delta g_{\nu\beta} + g_{\mu\alpha}g_{\nu\beta}\delta g^{\alpha\beta}\right]\\
+&=g^{\mu\nu}\delta_{\nu}^{\alpha}\delta g_{\mu\alpha} + g^{\mu\nu}\delta_{\mu}^{\beta}\delta g_{\nu\beta} + g^{\mu\nu}g_{\mu\alpha}g_{\nu\beta}\delta g^{\alpha\beta}\\
+&= g^{\mu\nu}\delta g_{\mu\nu} + g^{\mu\nu}\delta g_{\mu\nu} + \delta_{\alpha}^{\nu}g_{\nu\beta}\delta g^{\alpha\beta}\\
+&= g^{\mu\nu}\delta g_{\mu\nu} + g^{\mu\nu}\delta g_{\mu\nu} + g_{\mu\nu}\delta g^{\mu\nu}
+\end{split}
+\end{equation}
+
+Therefore, we have
+\begin{equation}
+g^{\mu\nu}\delta g_{\mu\nu} = -g_{\mu\nu}\delta g^{\mu\nu}
+\end{equation}
+
+Inserting the above result to Eq. \ref{eq:jacobi_formula},
+\begin{equation}
+\label{eq:var_det}
+\delta g = -g g_{\mu\nu}\delta g^{\mu\nu}
+\end{equation}
+
+Now we can write the first term in Eq. \ref{eq:var_eh} by using the Eq. \ref{eq:var_of_mdet} and Eq. \ref{eq:var_of_det} as,
+\begin{equation}
+\label{eq:ft}
+\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}} = -\frac{1}{2}\sqrt{-g}g_{\mu\nu}
+\end{equation}
+
+Second term in Eq. \ref{eq:var_eh} which contains the variation of Ricci scalar with respect to inverse metric can be calculated from the variation of Riemann tensor as,
+\begin{equation}
+\label{eq:var_of_rs}
+\begin{split}
+\delta R^{\rho}_{\ \sigma\mu\nu} &= \delta\left(\partial_{\mu}\Gamma^{\rho}_{\ \sigma\nu} - \partial_{\nu}\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\rho}_{\ \mu\lambda}\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\rho}_{\ \nu\lambda}\Gamma^{\lambda}_{\ \sigma\mu}\right)\\
+&= \partial_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) - \partial_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right) + \Gamma^{\lambda}_{\ \sigma\nu}\delta\Gamma^{\rho}_{\ \mu\nu} + \Gamma^{\rho}_{\ \mu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\lambda}_{\ \sigma\mu}\delta\Gamma^{\rho}_{\ \nu\lambda} - \Gamma^{\rho}_{\ \nu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\mu}
+\end{split}
+\end{equation}
+
+Covariant derivative of the $\delta\Gamma^{\rho}_{\ \sigma\nu}$,
+\begin{equation}
+\begin{split}
+\nabla_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) &= \partial_{\mu}\delta\Gamma^{\rho}_{\ \sigma\nu} + \Gamma^{\rho}_{\ \mu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\lambda}_{\ \mu\sigma}\delta\Gamma^{\rho}_{\ \lambda\nu} - \Gamma^{\lambda}_{\ \mu\nu}\delta \Gamma^{\rho}_{\ \lambda\sigma}\\
+\nabla_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) + \Gamma^{\lambda}_{\ \mu\nu}\delta\Gamma^{\rho}_{\ \lambda\sigma} &= \partial_{\mu}\delta\Gamma^{\rho}_{\ \sigma\nu} + \Gamma^{\rho}_{\ \mu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\nu} - \Gamma^{\lambda}_{\ \mu\sigma}\delta\Gamma^{\rho}_{\ \lambda\nu}
+\end{split}
+\end{equation}
+
+Covariant derivative of the $\delta\Gamma^{\rho}_{\ \sigma\mu}$,
+\begin{equation}
+\begin{split}
+\nabla_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right) &= \partial_{\nu}\delta\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\rho}_{\ \nu\lambda}\delta\Gamma^{\lambda}_{\ \sigma\mu} - \Gamma^{\lambda}_{\ \nu\sigma}\delta\Gamma^{\rho}_{\ \lambda\mu} - \Gamma^{\lambda}_{\ \nu\mu}\delta \Gamma^{\rho}_{\ \lambda\sigma}\\
+-\partial_{\nu}\delta\Gamma^{\rho}_{\ \sigma\mu} + \Gamma^{\lambda}_{\ \nu\sigma}\delta\Gamma^{\rho}_{\ \lambda\mu} - \Gamma^{\rho}_{\ \nu\lambda}\delta\Gamma^{\lambda}_{\sigma\mu} &= -\nabla_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right) - \Gamma^{\lambda}_{\ \nu\mu}\Gamma^{\rho}_{\ \lambda\sigma}
+\end{split}
+\end{equation}
+
+Inserting the rearranged covariant derivatives into the Eq. \ref{eq:var_of_rs} we have the variation of Riemann tensor as,
+\begin{equation}
+\label{eq:var_of_riemann}
+\delta R^{\rho}_{\ \sigma\mu\nu} = \nabla_{\mu}\left(\delta\Gamma^{\rho}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(\delta\Gamma^{\rho}_{\ \sigma\mu}\right)
+\end{equation}
+
+Contaction of the first and third indices gives us the variation of the Ricci tensor as,
+\begin{equation}
+\label{eq:var_of_ricci_t}
+\delta R^{\mu}_{\ \sigma\mu\nu} = \delta R_{\sigma\nu} = \nabla_{\mu}\left(\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(\delta\Gamma^{\mu}_{\ \sigma\mu}\right)
+\end{equation}
+
+Variation of Ricci scalar is therefore,
+\begin{equation}
+\label{eq:var_of_ricci_s}
+\begin{split}
+\delta\left(g^{\sigma\nu}R_{\sigma\nu}\right) = \delta R &= R_{\sigma\nu}\delta g^{\sigma\nu} + g^{\sigma\nu}\delta R_{\sigma\nu}\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + g^{\sigma\nu}\left( \nabla_{\mu}\left(\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(\delta\Gamma^{\mu}_{\ \sigma\mu}\right)\right)\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\nu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\mu}\right)\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\nu}\right) - \nabla_{\mu}\left(g^{\sigma\mu}\delta\Gamma^{\nu}_{\ \sigma\nu}\right)\\
+&= R_{\sigma\nu}\delta g^{\sigma\nu} + \nabla_{\mu}\left(g^{\sigma\nu}\delta\Gamma^{\mu}_{\ \sigma\nu} - g^{\sigma\mu}\delta\Gamma^{\nu}_{\ \sigma\nu}\right)
+\end{split}
+\end{equation}
+
+\begin{equation}
+\delta R = R_{\mu\nu}\delta g^{\mu\nu}
+\end{equation}
+
+From the integration covariant derivative will not be contributing the variation therefore now we can write the second term in Eq. \ref{eq:var_eh} as,
+\begin{equation}
+\label{eq:st}
+\frac{\delta R}{\delta g^{\mu\nu}} = R_{\mu\nu}
+\end{equation}
+
+Combining the two terms we calculated in Eq. \ref{eq:ft} and Eq. \ref{eq:st} we have the variation of the Einstein-Hilbert action as,
+\begin{equation}
+\begin{split}
+\delta S_{EH} &= \frac{1}{2\kappa}\int d^{4}x\left(\frac{1}{2}\sqrt{-g}g_{\mu\nu}R + R_{\mu\nu}\sqrt{-g}\right)\\
+&= \frac{1}{2\kappa}\int d^{4}x\sqrt{-g}\left(R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R\right)\\
+\end{split}
+\end{equation}
+
+where the term in the paranthesis is the Einstein tensor $G_{\mu\nu}$,
+\begin{equation}
+G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R
+\end{equation}

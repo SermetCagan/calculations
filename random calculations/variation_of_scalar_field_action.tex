@@ -1,0 +1,49 @@
+\section{Variation of Scalar Field Action \label{sec:variation_of_sf_action}}
+
+Scalar field action,
+\begin{equation}
+S_{\phi} = \int d^{4}x\sqrt{-g}\mathcal{L}
+\end{equation}
+
+where the Lagrangian of the scalar field is,
+\begin{equation}
+\mathcal{L} = -\frac{1}{2}g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\phi - V\left(\phi\right)
+\end{equation}
+
+Taking the variation of the action with respect to the inverse metric $g^{\mu\nu}$,
+
+\begin{equation}
+\begin{split}
+\delta S_{\phi} &= \int d^{4}x\frac{\delta\left(\sqrt{-g}\mathcal{L}\right)}{\delta g^{\mu\nu}}\\
+&= \int d^{4}x\left(\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\mathcal{L} + \sqrt{-g}\frac{\delta\mathcal{L}}{\delta g^{\mu\nu}}\right)\\
+&= \int d^{4}x\left(-\frac{1}{2}\sqrt{-g}g_{\mu\nu}\mathcal{L}\delta g^{\mu\nu} + \sqrt{-g}\left(-\frac{1}{2}\partial_{\mu}\phi\partial_{\nu}\phi\delta g^{\mu\nu}\right)\right)\\
+&= \int d^{4}x\sqrt{-g}\left(-\frac{1}{2}\right)\left(\partial_{\mu}\phi\partial_{\nu}\phi + g_{\mu\nu}\mathcal{L}\right)
+\end{split}
+\end{equation}
+
+where the term in the paranthesis is the energy-momentum tensor of the scalar field,
+\begin{equation}
+T_{\mu\nu} = \partial_{\mu}\phi\partial_{\nu}\phi + g_{\mu\nu}\mathcal{L}
+\end{equation}
+
+
+Taking the variation of the action with respect to the scalar field $\phi$ by,
+
+\begin{equation}
+\begin{split}
+&\phi\ \rightarrow \phi + \delta\phi\\
+&S\ \rightarrow S + \delta S
+\end{split}
+\end{equation}
+
+we have,
+\begin{equation}
+\begin{split}
+\cancelto{}S + \delta S &= \int d^{4}x\sqrt{-g}\left(-\frac{1}{2}g^{\mu\nu}\partial_{\mu}\left(\phi + \delta \phi\right)\partial_{\nu}\left(\phi + \delta \phi\right) - V\left(\phi + \delta \phi\right)\right)\\
+&= \int d^{4}x\sqrt{-g}\left(-\frac{1}{2}g^{\mu\nu}\left(\partial_{\mu}\phi + \partial_{\mu}\delta \phi\right)\left(\partial_{\nu}\phi + \partial_{\nu}\delta \phi\right) - V\left(\phi\right) - V^{\prime}\left(\phi\right)\delta \phi\right)\\
+&= \int d^{4}x\sqrt{-g}\left(-\frac{1}{2}g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\phi - V\left(\phi\right) - \frac{1}{2}g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\delta\phi -\frac{1}{2}\partial_{\mu}\delta\phi\partial_{\nu}\phi - V^{\prime}\left(\phi\right)\delta\phi\right)\\
+&= \cancelto{}S + \int d^{4}x\sqrt{-g}\left(-g^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\delta\phi - V^{\prime}\left(\phi\right)\delta\phi\right)\\
+&= \int d^{4}x\sqrt{-g}\left(-\cancelto{0}{\partial_{\nu}\left(g^{\mu\nu}\partial_{\mu}\phi\delta\phi\right)} + \cancelto{0}{\partial_{\nu}g^{\mu\nu}\partial_{\mu}\phi\delta\phi} + g^{\mu\nu}\partial_{\mu}\partial_{\nu}\phi\delta\phi - V^{\prime}\left(\phi\right)\delta\phi\right)\\
+&= \int d^{4}x\sqrt{-g}\left(\Box\phi - V^{\prime}\left(\phi\right)\right)\delta\phi
+\end{split}
+\end{equation}

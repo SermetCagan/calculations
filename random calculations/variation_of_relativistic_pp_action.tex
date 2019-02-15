@@ -1,0 +1,32 @@
+\section{Variation of Relativistic Point Particle Action \label{sec:variation_of_rpp_action}}
+
+Relativistic point particle action,
+
+\begin{equation}
+S_{PP} = -m\int ds = -m\int \sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}d\tau
+\end{equation}
+
+Taking the variation of the action above,
+
+\begin{equation}
+\begin{split}
+&\delta S_{PP} =\\
+&= -m\int d\tau \delta\left(\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}\right) = 0\\
+&= -m\int d\tau \frac{1}{2}\frac{1}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\delta\left(g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}\right)\\
+&= -m\int d\tau \frac{1}{2}\frac{1}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\left(\delta g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau} + g_{\mu\nu}\frac{d\delta x^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau} + g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{d\delta x^{\nu}}{d\tau}\right)\\
+&= -\frac{m}{2}\int \frac{d\tau}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\left(\delta g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau} + 2g_{\mu\nu}\frac{d\delta x^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}\right)\\
+&= -\frac{m}{2}\int \frac{d\tau}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\left(\delta g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau} + 2\left[\cancelto{0}{\frac{d}{d\tau}\left(g_{\mu\nu}\frac{dx^{\nu}}{d\tau}\delta x^{\mu}\right)} - \frac{dg_{\mu\nu}}{d\tau}\frac{dx^{\nu}}{d\tau}\delta x^{\mu} - g_{\mu\nu}\frac{d^{2}x^{\nu}}{d\tau^{2}}\delta x^{\mu}\right]\right)\\
+&= -\frac{m}{2}\int \frac{d\tau}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\left(\delta g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau} - 2 \partial_{\alpha}g_{\mu\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau}\delta x^{\mu} - g_{\mu\nu}\frac{d^{2}x^{\nu}}{d\tau^{2}}\delta x^{\mu}\right)\\
+&= -\frac{m}{2}\int \frac{d\tau}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\left(\partial_{\alpha}g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau} - \partial_{\alpha}g_{\mu\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - \partial_{\nu}g_{\mu\alpha}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - g_{\mu\nu}\frac{d^{2}x^{\nu}}{d\tau^{2}}\right)\delta x^{\mu}\\
+&= -\frac{m}{2}\int \frac{d\tau}{\sqrt{g_{\mu\nu}\frac{dx^{\mu}}{d\tau}\frac{dx^{\nu}}{d\tau}}}\left(\partial_{\mu}g_{\alpha\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - \partial_{\alpha}g_{\mu\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - \partial_{\nu}g_{\mu\alpha}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - g_{\mu\nu}\frac{d^{2}x^{\nu}}{d\tau^{2}}\right)\delta x^{\mu}\\
+\end{split}
+\end{equation}
+
+Since the right hand side is zero, the term in the paranthesis is must be zero. Multiplying the term with $-\frac{1}{2}g^{\mu\beta}$ we have,
+\begin{equation}
+\begin{split}
+&\partial_{\mu}g_{\alpha\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - \partial_{\alpha}g_{\mu\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - \partial_{\nu}g_{\mu\alpha}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau} - g_{\mu\nu}\frac{d^{2}x^{\nu}}{d\tau^{2}} = 0\\\\
+&\frac{d^{2}x^{\beta}}{d\tau^{2}} = -\frac{1}{2}g^{\mu\beta}\left(\partial_{\alpha}g_{\mu\nu} + \partial_{\nu}g_{\mu\alpha} - \partial_{\mu}g_{\alpha\nu}\right)\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau}\\\\
+& \frac{d^{2}x^{\beta}}{d\tau^{2}} = -\Gamma^{\beta}_{\ \alpha\nu}\frac{dx^{\alpha}}{d\tau}\frac{dx^{\nu}}{d\tau}
+\end{split}
+\end{equation}

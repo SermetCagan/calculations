@@ -1,0 +1,51 @@
+\section{Exercise 1-2-3-4 Solutions [Baumann] \label{ex:1234sols}}
+
+\subsection{Thermal Distributions}
+\subsubsection{Relativistic Limit (part a)}
+
+$T \gg m$ and $T \gg \mathopen|\mu\mathclose|$,
+
+\begin{align}
+    n &= \frac{g}{\left(2\pi\right)^{3}}\int d^{3}p f\left(p\right) \\
+    &= \frac{g}{2\pi^{2}}\int\limits_{0}^{\infty} dp p^{2}\frac{1}{e^{\left(E-\mu\right)/T} \pm 1}\\
+    &= \left\{\xi = p/T\quad x=m/T\right\}\\
+    &= \left\{E = \left(p^{2} + m^{2}\right)^{1/2} = T\left(\xi^{2} + x^{2}\right)^{1/2} = \left\{x\ \rightarrow\ 0\right\} \approx T\xi\right\}\\
+    &= \frac{g}{2\pi^{2}}\int\limits_{0}^{\infty} Td\xi \xi^{2}T^{2}\frac{1}{e^{\xi} \pm 1}\\
+    &= \frac{gT^{3}}{2\pi^{2}}\int\limits_{0}^{\infty}d\xi \frac{\xi^{2}}{e^{\xi} \pm 1}
+\end{align}
+
+For bosons,
+\begin{align}
+    n &= \frac{gT^{3}}{2\pi^{2}}\int\limits_{0}^{\infty}d\xi \frac{\xi^{2}}{e^{\xi} - 1} = \frac{gT^{3}}{2\pi^{2}}\zeta\left(3\right)\Gamma\left(3\right) = \frac{gT^{3}}{\pi^{2}}\zeta\left(3\right)
+\end{align}
+
+For fermions,
+\begin{align}
+    n &= \frac{gT^{3}}{2\pi^{2}}\int\limits_{0}^{\infty}d\xi \frac{\xi^{2}}{e^{\xi} + 1}\\
+    &= \frac{gT^{3}}{2\pi^{2}}\int\limits_{0}^{\infty}d\xi \left(\frac{\xi^{2}}{e^{\xi}-1} - \frac{2\xi^{2}}{e^{2\xi} - 1}\right)\\
+    &= \frac{gT^{3}}{2\pi^{2}}2\zeta\left(3\right) - \frac{gT^{3}}{2\pi^{2}}\frac{1}{4}2\zeta\left(3\right)\\
+    &= \frac{gT^{3}}{\pi^{2}}\zeta\left(3\right)\frac{3}{4}
+\end{align}
+
+where I used the $2\xi = u$ transformation while calculating the second integral.
+
+Therefore, we have,
+\begin{align}
+    n = \frac{gT^{3}}{\pi^{2}}\zeta\left(3\right)
+    \Bigg\{
+    \begin{split}
+    1\quad &\text{bosons}\\
+    \frac{3}{4}\quad &\text{fermions}
+    \end{split}
+\end{align}
+
+\begin{align}
+    \rho &= \frac{g}{2\pi^{2}}\int\limits_{0}^{\infty} dp p^{2}f\left(p\right)E\left(p\right)\\
+    &= \frac{g}{2\pi^{2}}\int\limits_{0}^{\infty} dp p^{3}\frac{1}{e^{p/T} \pm 1}\\
+    &= \frac{gT^{4}}{2\pi^{2}}\int\limits_{0}^{\infty} d\xi \frac{\xi^{3}}{e^{\xi} \pm 1}
+\end{align}
+
+For bosons,
+\begin{align}
+    \rho &= \frac{gT^{4}}{2\pi^{2}}\int\limits_{0}^{\infty}d\xi \frac{\xi^{3}}{e^{\xi} - 1} = 
+\end{align}

@@ -19,5 +19,70 @@ Left-hand side of the Boltzmann equation \ref{eq:unintegrated_boltzmann} means t
 Solution of the Boltzmann equation will be given in the context of couple examples, such as the Boltzmann equation for the Harmonic Oscillator, the B.E. for the photon both for collisionless and with collision etc.
 
 \section{\texttt{The Boltzmann Equation for the Harmonic Oscillator}}
+Consider 1-dimensional harmonic oscillator with energy,
+\begin{align}
+E = \frac{p^{2}}{2m} + \frac{1}{2}kx^{2}
+\end{align}
+
+The distribution function depends on time $t$, position $x$ and momentum $p$. Therefore, we can write the total time derivative of the distribution function as,
+\begin{align}
+\frac{df}{dt} = \frac{\partial f}{\partial t} + \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial p}\frac{\partial p}{\partial t}
+\end{align}
+
+Contributions of the elements $dx/dt$ and $dp/dt$ can be calculated very trivially from the equations of motion as,
+\begin{align}
+&p = m\frac{dx}{dt}\quad \rightarrow\quad \frac{dx}{dt} = \frac{p}{m}\\
+&F = -kx\quad \rightarrow\quad \frac{dp}{dt} = -kx
+\end{align}
+
+Therefore, the collisionless Boltzmann equation for the 1-dimensional harmonic oscillator can be written as,
+\begin{align}
+\underbrace{\frac{\partial f}{\partial t}}_{1} + \underbrace{\frac{p}{m}\frac{\partial f}{\partial x}}_{2} + \underbrace{\left(-kx\frac{\partial f}{\partial p}\right)}_{3} = 0
+\end{align}
+
+\begin{itemize}
+\item \textbf{2 : } How rapidly the oscillator moves in real space
+\item \textbf{3 : } How quickly particles lose momentum
+\end{itemize}
+
+In order to solve the Boltzmann equation, we need to know the initial conditions on the distribution function. But for now consider the general solution for the  equilibrium distribution $\left(\frac{\partial f}{\partial t} = 0\right)$ which is,
+\begin{align}
+f\left(p,x\right) = f_{EQ}\left(E\right)
+\end{align}
+
+To show that this is actually the solution for the equilibrium distribution we can do the following,
+\begin{align}
+&\frac{p}{m}\frac{\partial f_{EQ}}{\partial x} -kx\frac{\partial f_{EQ}}{\partial p} = 0\\
+&\frac{p}{m}\frac{\partial f_{EQ}}{\partial E}\frac{\partial E}{\partial x} -kx\frac{\partial f_{EQ}}{\partial E}\frac{\partial E}{\partial p} = 0\\
+&\frac{\partial f}{\partial E}\left[\frac{p}{m}kx - kx\frac{p}{m}\right] = 0
+\end{align}
+
+Therefore we can make the conclusion that any function that depends only on the energy is a solution for the equilibrium distribution.
+
+
+\section{\texttt{The Collisionless Boltzmann Equation For Photons}}
+Before starting the calculations regarding the collisionless Boltzmann equation for the photons, we need to specify the form of the metric. Metric of the smoot universe is described by,
+\begin{align}
+g_{\mu\nu} = \text{diag}\left(-1,a^{2},a^{2},a^{2}\right)
+\end{align}
+
+Considering the perturbations around this smooth universe, we require more parameters than the scale parameter $a\left(t\right)$ that depends only on time. The functions that we are looking for to describe the perturbations around this smooth universe are $\Phi$ and $\Psi$ where they depend both on space and time. In terms of these new functions that we introduced, the metric can be rewritten as,
+\begin{align*}
+\rotatebox[origin=c]{90}{Conformal Newtonian Gauge}
+\begin{cases}
+&g_{00}\left(\vec{x},t\right) = -1-2\Psi\left(\vec{x},t\right)\\\\
+&g_{0i}\left(\vec{x},t\right) = 0\\\\
+&g_{ij}\left(\vec{x},t\right) = a^{2}\delta_{ij}\left(1 + 2\Phi\left(\vec{x},t\right)\right)
+\end{cases}
+\end{align*} 
+
+\begin{itemize}
+\item In the absence of $\Phi$ and $\Psi$ the metric reduces to the Friedmann-Robertson-Walker metric of the zero-order which defines the homogeneous, flat cosmology.
+\item In the absence of expansion $\left(a=1\right)$, metric describes a weak gravitational field.
+\end{itemize}
+
+$\Psi$ : Newtonian potential\\
+$\Phi$ : Perturbation to the spatial curvature
+
 
 \end{document}

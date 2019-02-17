@@ -1,9 +1,9 @@
 \input{preamble.tex}
 
 
-\title{\texttt{\textbf{Calculation, arXiv:1502.05193\\Does Current Data Prefer a Non-minimally Coupled Inflaton?}}}
-\author{\texttt{Sermet \c{C}a\u{g}an}}
-\date{\texttt{Date: \today}}
+\title{\textbf{Calculation, arXiv:1502.05193\\Does Current Data Prefer a Non-minimally Coupled Inflaton?}}
+\author{Sermet \c{C}a\u{g}an}
+\date{Date: \today}
 
 
 \begin{document}
@@ -17,5 +17,41 @@
 \end{itemize}
 \newpage
 
+\section{Minimal coupled Inflaton in Jordan frame}
+
+For a minimal coupled inflaton, we set the $\xi = 0$. The action therefore takes the form,
+\begin{align}
+S = \int d^{4}x \sqrt{-g}\left[\frac{M_{p}^{2}}{2}R - \frac{1}{2}\left(\partial\phi\right)^{2} - V\left(\phi\right)\right]
+\end{align}
+
+The potential is taken as quadratic since it is the simplest one,
+\begin{align}
+V\left(\phi\right) = \frac{1}{2}m^{2}\phi^{2}
+\end{align}
+
+The derivatives are therefore,
+\begin{align}
+&V^{\prime} = m^{2}\phi\\
+&V^{\prime\prime} = m^{2}
+\end{align}
+
+Slow-roll parameters are,
+\begin{align}
+&\epsilon = \frac{M_{p}^{2}}{16\pi}\left(\frac{V^{\prime}}{V}\right)^{2} = \frac{M_{p}^{2}}{4\pi \phi^{2}}\\
+&\eta = \frac{M_{p}^{2}}{8\pi}\frac{V^{\prime\prime}}{V} = \frac{M_{p}^{2}}{4\pi\phi^{2}}
+\end{align}
+
+Number of e-foldings can be calculated as shown below,
+\begin{align}
+N &= \int\limits_{t_{i}}^{t_{f}}Hdt\\
+&= \int\limits_{\phi_{i}}^{\phi_{f}}\frac{H}{\dot{\phi}}d\phi\\
+&= -\frac{24\pi}{3M_{p}^{2}}\int\limits_{\phi_{i}}^{\phi_{f}}\frac{V}{V^{\prime}}d\phi\\
+&= -\frac{2\pi}{M_{p}^{2}}\left(\phi_{f}^{2} - \phi_{i}^{2}\right)
+\end{align}
+
+\section{Conformal transformation}
+
+
+\section{Non-minimal coupling in Einstein frame}
 
 \end{document}

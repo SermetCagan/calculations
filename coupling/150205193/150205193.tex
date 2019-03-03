@@ -13,6 +13,7 @@
 \item \textbf{Study :} Focusing on the simplest inflationary model governed by the potential $V \propto \phi^{2}$
 \item \textbf{Data :} Planck 2018
 \item \textbf{Result :} Planck and BICEP2/Keck Array 2015; presence of a coupling $\xi$ is favoured at a significance of $99\%$ CL, $\xi \ne 0 \ \rightarrow 2\sigma$ level. Cross-correlation polarization spectra from BICEP2/Keck array and Planck,\\ $r = 0.038 ^{+0.039} _{-0.030}$.
+\item \textbf{References :} \begin{itemize} \item arXiv:1502.05193 \item arXiv:0002091 \end{itemize}
 \end{itemize}
 \newpage
 
@@ -30,8 +31,7 @@ V\left(\phi\right) = \frac{1}{2}m^{2}\phi^{2}
 
 The derivatives are therefore,
 \begin{align}
-&V^{\prime} = m^{2}\phi\\
-&V^{\prime\prime} = m^{2}
+V^{\prime} = m^{2}\phi \quad V^{\prime\prime} = m^{2}
 \end{align}
 
 Slow-roll parameters are,
@@ -42,8 +42,7 @@ Slow-roll parameters are,
 
 Number of e-foldings can be calculated as shown below,
 \begin{align}
-N &= \int\limits_{t_{i}}^{t_{f}}Hdt\\
-&= \int\limits_{\phi_{i}}^{\phi_{f}}\frac{H}{\dot{\phi}}d\phi\\
+N &= \int\limits_{t_{i}}^{t_{f}}Hdt = \int\limits_{\phi_{i}}^{\phi_{f}}\frac{H}{\dot{\phi}}d\phi\\
 &= -\frac{24\pi}{3M_{p}^{2}}\int\limits_{\phi_{i}}^{\phi_{f}}\frac{V}{V^{\prime}}d\phi\\
 &= -\frac{2\pi}{M_{p}^{2}}\left(\phi_{f}^{2} - \phi_{i}^{2}\right)
 \end{align}
@@ -63,6 +62,12 @@ Now, let us assume that the number of e-foldings $N$ is equal to $60$, thus we h
 \phi_{i}^{2} = \left(60 + \frac{1}{2}\frac{M_{p}^{2}}{2\pi}\right)
 \end{align}
 
+Spectral index and tensor-to-scalar ratio expressions in terms of the slow-roll parameter are,
+\begin{align}
+n_{s} &= 1 + 2\eta - 6\epsilon\\
+r &= 16\epsilon
+\end{align}
+
 Inserting the found initial scalar field expression into the slow-roll parameter expressions and from there calculating the spectral index of the primordial scarlar perturbations $n_{s}$ and tensor-to-scalar ratio $r$ we have the following values for $N=60$,
 \begin{align}
 n_{s} = 0.96694214876\quad\quad r = 0.132231404959
@@ -77,25 +82,38 @@ Comparing the results with the Planck 2018 data,
 \begin{figure}[H]
 \begin{subfigure}[b]{.5\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/fig1.pdf}
+\includegraphics[width=0.6\textwidth]{./figures/fig1.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{.5\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/fig4.pdf}
+\includegraphics[width=0.6\textwidth]{./figures/fig4.pdf}
 \end{subfigure}
 \caption{Tensor power spectrum amplitude ($r$)}
 \begin{subfigure}[b]{.5\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/fig2.pdf}
+\includegraphics[width=0.6\textwidth]{./figures/fig2.pdf}
 \end{subfigure}
 \begin{subfigure}[b]{.5\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/fig3.pdf}
+\includegraphics[width=0.6\textwidth]{./figures/fig3.pdf}
 \end{subfigure}
 \caption{Running of the spectral index + Tensor power spectrum amplitude ($k = 0.05 Mpc^{-1}$)(nrun + r)}
 \end{figure}
 
 \section{Conformal transformation}
+Conformal transformations allows us to convert non-minimally coupled scalar field in Jordan frame into the minimal coupled scalar field in Einstein frame using the following transformation steps,
+\begin{align}
+& g_{\mu\nu} \quad \rightarrow\quad \tilde{g}_{\mu\nu} = \Omega^{2}g_{\mu\nu}\\
+& \Omega = \sqrt{1 - \kappa \xi \phi^{2}}\\
+& d\tilde{\phi} = \frac{\sqrt{1 - \kappa \xi \left(1-6\xi\right)\phi^{2}}}{1 - \kappa \xi \phi^{2}}\\
+& \tilde{V}\left[\tilde{\phi}\right] = \frac{V\left[\phi\left(\tilde{\phi}\right)\right]}{\left(1 - \kappa \xi \phi^{2}\right)^{2}}
+\end{align}
+
+The action which represents the dynamics of the non-minimally coupled scalar field in Jordan frame is given as,
+\begin{align}
+S = \int d^{4}x \sqrt{-g}\left[\frac{M_{p}^{2}}{2}R + \frac{\xi}{2}R\phi^{2} - \frac{1}{2}\left(\partial\phi\right)^{2} - U\left(\phi\right)\right]
+\end{align}
+
 
 
 \section{Non-minimal coupling in Einstein frame}
